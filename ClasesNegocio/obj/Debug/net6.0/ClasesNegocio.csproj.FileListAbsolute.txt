@@ -1,0 +1,12 @@
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\bin\Debug\net6.0\ClasesNegocio.deps.json
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\bin\Debug\net6.0\ClasesNegocio.dll
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\bin\Debug\net6.0\ClasesNegocio.pdb
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ClasesNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ClasesNegocio.AssemblyInfoInputs.cache
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ClasesNegocio.AssemblyInfo.cs
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ClasesNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ClasesNegocio.sourcelink.json
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ClasesNegocio.dll
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\refint\ClasesNegocio.dll
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ClasesNegocio.pdb
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ClasesNegocio\obj\Debug\net6.0\ref\ClasesNegocio.dll
