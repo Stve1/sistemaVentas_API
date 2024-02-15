@@ -5,8 +5,7 @@ namespace AccesoDatos
 {
     public class daProductos
     {
-        //obtenerProductos
-
+        //Método para obtenerProductos
         public List<classProductos> obtenerProductos()
         {
 
@@ -49,6 +48,78 @@ namespace AccesoDatos
             v_con.Close();
 
             return lProductos;
+        }
+
+        //Método para RegistrarVentas
+        public int registrarVentas(classTotProductos totalProductos)
+        {
+
+            string INSERT_PRODUCTOS = @$"INSERT INTO VENTAS (fecha_venta, total_descuento, total_incremento, total_venta, id_cliente, cantidad_productos)
+                VALUES (current_timestamp , {totalProductos.total_descuento}, {totalProductos.total_incremento}, {totalProductos.total_venta}, {totalProductos.id_cliente}, {totalProductos.cantidad_productos});";
+
+            classProductos productos;
+
+            int idProducto = -1;
+
+            conexionDB con = new conexionDB();
+            NpgsqlConnection v_con = con.conexion();
+            v_con.Open();
+            try
+            {
+                NpgsqlCommand command = new NpgsqlCommand(INSERT_PRODUCTOS, v_con);
+
+                int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
+
+                if(nRegistros > 0)
+                {
+                    idProducto = nRegistros;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            v_con.Close();
+
+            return idProducto;
+        }
+
+
+        //Método para Registrar venta de productos
+        public int registrarProductos(classVentaProd productos)
+        {
+
+            string INSERT_PRODUCTOS = @$"INSERT INTO venta_productos (id_producto, cantidad_producto, descuento_producto, incremento_producto, fecha_venta, id_venta)
+                VALUES ((SELECT id_producto FROM productos WHERE cod_producto = {productos.cod_producto}), {productos.cant_producto}, {productos.descuento_producto}, {productos.incremento_producto} ,current_timestamp,
+                (SELECT id_venta FROM ventas ORDER BY id_venta DESC limit 1));";
+
+            int idProducto = -1;
+
+            conexionDB con = new conexionDB();
+            NpgsqlConnection v_con = con.conexion();
+            v_con.Open();
+            try
+            {
+                NpgsqlCommand command = new NpgsqlCommand(INSERT_PRODUCTOS, v_con);
+
+                int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
+
+                if (nRegistros > 0)
+                {
+                    idProducto = nRegistros;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            v_con.Close();
+
+            return idProducto;
         }
     }
 }
