@@ -35,17 +35,20 @@ namespace AccesoDatos
                     productos.cant_producto = reader.GetInt32(5);
                     productos.cod_producto = reader.GetInt32(6);
                     productos.id_subcategoria = reader.GetInt32(7);
+                    productos.costo2_producto = reader.GetInt32(8);
+                    productos.precio2_producto = reader.GetInt32(9);
 
                     lProductos.Add(productos);
                 }
 
+                v_con.Close();
+
             }
             catch (Exception ex)
             {
+                v_con.Close();
                 throw ex;
             }
-
-            v_con.Close();
 
             return lProductos;
         }

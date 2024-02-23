@@ -10,6 +10,8 @@
         public int cant_producto { get; set; }
         public int cod_producto { get; set; }
         public int id_subcategoria { get; set; }
+        public int costo2_producto { get; set; }
+        public int precio2_producto { get; set; }
 
     }
 }
