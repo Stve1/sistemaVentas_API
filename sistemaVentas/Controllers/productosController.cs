@@ -10,6 +10,8 @@ namespace sistemaVentas.Controllers
     public class productosController : Controller
     {
         // POST: HomeController1/Create
+
+        //obtenerProductos
         [HttpGet, Route("obtenerProductos")]
         public List<classProductos> obtenerProductos()
         {
@@ -25,8 +27,45 @@ namespace sistemaVentas.Controllers
             {
                 string mensaje = ex.Message;
             }
-
             return respuesta;
+        }
+
+        //registrarVentas
+        [HttpPost, Route("registrarVentas")]
+        public int registrarVentas(classTotProductos totalProductos)
+        {
+            int idProducto = -1;
+
+            vrProductos ovrProductos = new vrProductos();
+
+            try
+            {
+                idProducto = ovrProductos.registrarVentas(totalProductos);
+            }
+            catch (Exception ex)
+            {
+                string mensaje = ex.Message;
+            }
+            return idProducto;
+        }
+
+        //registrarProductos
+        [HttpPost, Route("registrarProductos")]
+        public int registrarProductos(classVentaProd productos)
+        {
+            int idProducto = -1;
+
+            vrProductos ovrProductos = new vrProductos();
+
+            try
+            {
+                idProducto = ovrProductos.registrarProductos(productos);
+            }
+            catch (Exception ex)
+            {
+                string mensaje = ex.Message;
+            }
+            return idProducto;
         }
 
         // POST: HomeController1/Edit/5
