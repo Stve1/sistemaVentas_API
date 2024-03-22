@@ -98,6 +98,10 @@ namespace AccesoDatos
                 VALUES ((SELECT id_producto FROM productos WHERE cod_producto = {productos.cod_producto}), {productos.cant_producto}, {productos.descuento_producto}, {productos.incremento_producto} ,current_timestamp,
                 (SELECT id_venta FROM ventas ORDER BY id_venta DESC limit 1));";
 
+            string CANT_PRODUCTOS = @$"UPDATE productos SET CANT_PRODUCTO = (
+                (SELECT cant_producto WHERE cod_producto = {productos.cod_producto}) - {productos.cant_producto})
+                WHERE cod_producto = {productos.cod_producto};";
+
             int idProducto = -1;
 
             conexionDB con = new conexionDB();
@@ -106,11 +110,17 @@ namespace AccesoDatos
             try
             {
                 NpgsqlCommand command = new NpgsqlCommand(INSERT_PRODUCTOS, v_con);
-
                 int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
 
                 if (nRegistros > 0)
                 {
+                    conexionDB conCP = new conexionDB();
+                    NpgsqlConnection v_conCP = conCP.conexion();
+                    v_conCP.Open();
+
+
+
+                    v_conCP.Close();
                     idProducto = nRegistros;
                 }
 

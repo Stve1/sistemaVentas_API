@@ -10,7 +10,7 @@ namespace ValidadorNegocio
 {
     public class vrReportes
     {
-        public List<classReporteVentas> reportesDiarios()
+        public List<classReporteVentas> reportesDiarios(string fechaIni, string fechaFin, int id_unidad)
         {
             List<classReporteVentas> id_venta = new List<classReporteVentas>();
 
@@ -18,7 +18,7 @@ namespace ValidadorNegocio
 
             try
             {
-                id_venta = odaReportes.reportesDiarios();
+                id_venta = odaReportes.reportesDiarios(fechaIni, fechaFin, id_unidad);
             }
             catch (Exception ex)
             {
@@ -45,5 +45,42 @@ namespace ValidadorNegocio
 
             return idProducto;
         }
+
+        public int registrarSalida(classSalidas salidas)
+        {
+            int idSalida = -1;
+
+            daReportes odaReportes = new daReportes();
+
+            try
+            {
+                idSalida = odaReportes.registrarSalida(salidas);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return idSalida;
+        }
+
+        public List<classSalidas> obtenerSalidas(string fechaIni, string fechaFin, int id_unidad)
+        {
+            List<classSalidas> salidas = new List<classSalidas>();
+
+            daReportes odaReportes = new daReportes();
+
+            try
+            {
+                salidas = odaReportes.obtenerSalidas(fechaIni, fechaFin, id_unidad);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return salidas;
+        }
+
     }
 }

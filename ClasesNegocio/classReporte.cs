@@ -16,5 +16,6 @@ namespace ClasesNegocio
         public int total_venta { get; set; }
         public int id_cliente { get; set; }
         public int cantidad_productos { get; set; }
+        public string descripcion_metodo_pago { get; set; }
     }
 }
