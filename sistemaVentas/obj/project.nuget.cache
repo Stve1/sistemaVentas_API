@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CX55QGKa+5EiSFDFnURXbavEYHeYNSA2yGHeN9RZfTg2IhsLs2DO79dy/8qHqKwx2qoBiUw9EWxgsUfZ46wBHA==",
+  "dgSpecHash": "caB6O3lxztmJLxxP9ci5kWmVCFidCjy+mpyUT0p11RlK5l8UuvEj2+NWdetaH3DoTOWffqn5lOLLw31WUDMHMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pc\\Documents\\HanzelVelez\\Proyectos\\sistemaVentaV1\\sistemaVentas_API\\sistemaVentas\\sistemaVentas.csproj",
   "expectedPackageFiles": [
@@ -223,6 +223,16 @@
     "C:\\Users\\Pc\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Npgsql\" 6.0.10 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-x9vc-6hfv-hg8c",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

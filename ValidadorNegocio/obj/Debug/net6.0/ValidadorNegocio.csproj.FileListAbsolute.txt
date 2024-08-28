@@ -11,7 +11,7 @@ C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\Val
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\ValidadorNegocio.AssemblyInfo.cs
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\ValidadorNegocio.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\ValidadorNegocio.sourcelink.json
-C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\ValidadorNegocio.csproj.CopyComplete
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\Validado.9D5B3934.Up2Date
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\ValidadorNegocio.dll
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\refint\ValidadorNegocio.dll
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\ValidadorNegocio\obj\Debug\net6.0\ValidadorNegocio.pdb

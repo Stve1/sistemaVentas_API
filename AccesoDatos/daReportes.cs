@@ -1,10 +1,5 @@
 ﻿using ClasesNegocio;
 using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccesoDatos
 {
@@ -24,37 +19,48 @@ namespace AccesoDatos
             classReporteVentas reportes;
 
             conexionDB con = new conexionDB();
-            NpgsqlConnection v_con = con.conexion();
-            v_con.Open();
-            try
+            using(NpgsqlConnection v_con = con.conexion())
             {
-                NpgsqlCommand command = new NpgsqlCommand(SELECT_REPORTES, v_con);
-
-                using NpgsqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    reportes = new classReporteVentas();
-                    reportes.id_venta = reader.GetInt32(0);
-                    reportes.nombre_cliente = reader.GetString(1);
-                    reportes.fecha_venta = reader.GetDateTime(2);
-                    reportes.total_descuento = reader.GetInt32(3);
-                    reportes.total_incremento = reader.GetInt32(4);
-                    reportes.total_venta = reader.GetInt32(5);
-                    reportes.id_cliente = reader.GetInt32(6);
-                    reportes.cantidad_productos = reader.GetInt32(7);
-                    reportes.descripcion_metodo_pago = reader.GetString(8);
+                    v_con.Open();
 
-                    lReportes.Add(reportes);
+                    using (NpgsqlCommand command = new NpgsqlCommand(SELECT_REPORTES, v_con))
+                    {
+                        using (NpgsqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                reportes = new classReporteVentas();
+                                reportes.id_venta = reader.GetInt32(0);
+                                reportes.nombre_cliente = reader.GetString(1);
+                                reportes.fecha_venta = reader.GetDateTime(2);
+                                reportes.total_descuento = reader.GetInt32(3);
+                                reportes.total_incremento = reader.GetInt32(4);
+                                reportes.total_venta = reader.GetInt32(5);
+                                reportes.id_cliente = reader.GetInt32(6);
+                                reportes.cantidad_productos = reader.GetInt32(7);
+                                reportes.descripcion_metodo_pago = reader.GetString(8);
+
+                                lReportes.Add(reportes);
+                            }
+
+                            v_con.Dispose();
+                        };
+                    };
+
+                }
+                catch (Exception ex)
+                {
+                    //v_con.Close();
+                    throw ex;
                 }
 
-                v_con.Close();
+                finally
+                {
+                    v_con.Dispose();
+                }
 
-            }
-            catch (Exception ex)
-            {
-                v_con.Close();
-                throw ex;
             }
 
             return lReportes;
@@ -72,26 +78,32 @@ namespace AccesoDatos
             int idProducto = -1;
 
             conexionDB con = new conexionDB();
-            NpgsqlConnection v_con = con.conexion();
-            v_con.Open();
-            try
+            using (NpgsqlConnection v_con = con.conexion())
             {
-                NpgsqlCommand command = new NpgsqlCommand(INSERT_PRODUCTOS, v_con);
-
-                int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
-
-                if (nRegistros > 0)
+                try
                 {
-                    idProducto = nRegistros;
+                    v_con.Open();
+                    using(NpgsqlCommand command = new NpgsqlCommand(INSERT_PRODUCTOS, v_con))
+                    {
+                        int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
+
+                        if (nRegistros > 0)
+                        {
+                            idProducto = nRegistros;
+                        }
+                        v_con.Dispose();
+                    };
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
                 }
 
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            v_con.Close();
+                finally
+                {
+                    v_con.Dispose();
+                }
+            };
 
             return idProducto;
         }
@@ -108,61 +120,81 @@ namespace AccesoDatos
             int idProducto = -1;
 
             conexionDB con = new conexionDB();
-            NpgsqlConnection v_con = con.conexion();
-            v_con.Open();
-            try
+            using (NpgsqlConnection v_con = con.conexion())
             {
-                NpgsqlCommand command = new NpgsqlCommand(INSERT_PRODUCTOS, v_con);
-
-                int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
-
-                if (nRegistros > 0)
+                try
                 {
-                    idProducto = nRegistros;
+                    v_con.Open();
+
+                    using (NpgsqlCommand command = new NpgsqlCommand(INSERT_PRODUCTOS, v_con))
+                    {
+                        int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
+
+                        if (nRegistros > 0)
+                        {
+                            idProducto = nRegistros;
+                        }
+
+                        v_con.Dispose();
+                    };
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
                 }
 
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            v_con.Close();
+                finally
+                {
+                    v_con.Dispose();
+                }
+            };
 
             return idProducto;
         }
 
 
         //Método para registrar salidas- gastos
-        public int registrarSalida(classSalidas salidas)
+        public int registrarSalida(classEnvioSalida salidas)
         {
-
+            /*
             string INSERT_SALIDAS = @$"INSERT INTO salidas (descripcion_salida, valor_salida, metodo_pago_salida, fecha_salida)
-                VALUES ({salidas.descripcion_salida}, {salidas.valor_salida}, {salidas.metodo_pago_salida}, current_timestamp);";
+                VALUES ('{salidas.descripcion_salida}', {salidas.valor_salida}, {salidas.metodo_pago}, current_timestamp);";*/
+            string INSERT_SALIDAS = @$"INSERT INTO salidas (descripcion_salida, valor_salida, metodo_pago_salida, fecha_salida)
+                VALUES ('1', 1, 1, current_timestamp);";
 
             int idSalida = -1;
 
             conexionDB con = new conexionDB();
-            NpgsqlConnection v_con = con.conexion();
-            v_con.Open();
-            try
+            using (NpgsqlConnection v_con = con.conexion())
             {
-                NpgsqlCommand command = new NpgsqlCommand(INSERT_SALIDAS, v_con);
-
-                int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
-
-                if (nRegistros > 0)
+                try
                 {
-                    idSalida = nRegistros;
+                    v_con.Open();
+
+                    using (NpgsqlCommand command = new NpgsqlCommand(INSERT_SALIDAS, v_con))
+                    {
+                        int nRegistros = Convert.ToInt32(command.ExecuteNonQuery());
+
+                        if (nRegistros > 0)
+                        {
+                            idSalida = nRegistros;
+                        }
+
+                        v_con.Dispose();
+                    };
+                }
+                catch (Exception ex)
+                {
+                    //v_con.Close();
+                    throw ex;
                 }
 
-                v_con.Close();
-            }
-            catch (Exception ex)
-            {
-                v_con.Close();
-                throw ex;
-            }
+                finally
+                {
+                    v_con.Dispose();
+                }
+            };
 
             return idSalida;
         }
@@ -181,34 +213,44 @@ namespace AccesoDatos
             classSalidas salidas = new classSalidas();
 
             conexionDB con = new conexionDB();
-            NpgsqlConnection v_con = con.conexion();
-            v_con.Open();
-            try
+            using (NpgsqlConnection v_con = con.conexion())
             {
-                NpgsqlCommand command = new NpgsqlCommand(SELECT_SALIDAS, v_con);
-
-                using NpgsqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    salidas = new classSalidas();
-                    salidas.id_salida = reader.GetInt32(0);
-                    salidas.descripcion_salida = reader.GetString(1);
-                    salidas.valor_salida = reader.GetInt32(2);
-                    salidas.metodo_pago_salida = reader.GetInt32(3);
-                    salidas.descripcion_metodo_pago = reader.GetString(4);
-                    salidas.fecha_registro_salida = reader.GetDateTime(5);
-                    listSalidas.Add(salidas);
+                    v_con.Open();
+
+                    using (NpgsqlCommand command = new NpgsqlCommand(SELECT_SALIDAS, v_con))
+                    {
+                        using (NpgsqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                salidas = new classSalidas();
+                                salidas.id_salida = reader.GetInt32(0);
+                                salidas.descripcion_salida = reader.GetString(1);
+                                salidas.valor_salida = reader.GetInt32(2);
+                                salidas.metodo_pago_salida = reader.GetInt32(3);
+                                salidas.descripcion_metodo_pago = reader.GetString(4);
+                                salidas.fecha_registro_salida = reader.GetDateTime(5);
+                                listSalidas.Add(salidas);
+                            }
+
+                            v_con.Dispose();
+                        };
+                    };
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
                 }
 
-                v_con.Close();
+                finally
+                {
+                    v_con.Dispose();
+                }
 
-            }
-            catch (Exception ex)
-            {
-                v_con.Close();
-                throw ex;
-            }
+            };
 
             return listSalidas;
         }

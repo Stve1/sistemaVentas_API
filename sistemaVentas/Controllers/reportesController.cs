@@ -49,8 +49,8 @@ namespace sistemaVentas.Controllers
         }
 
         //registrarSalidas - gastos
-        [HttpPost, Route("registrarSalida")]
-        public int registrarSalida(classSalidas salidas)
+        [HttpGet, Route("registrarSalida")]
+        public int registrarSalida(classEnvioSalida salidas)
         {
             int idSalida = -1;
 

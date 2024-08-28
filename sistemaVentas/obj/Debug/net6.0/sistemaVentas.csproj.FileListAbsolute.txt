@@ -286,7 +286,7 @@ C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sis
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\scopedcss\bundle\sistemaVentas.styles.css
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\scopedcss\projectbundle\sistemaVentas.bundle.scp.css
-C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\sistemaVentas.csproj.CopyComplete
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\sistemaV.1C8915B6.Up2Date
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\sistemaVentas.dll
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\refint\sistemaVentas.dll
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\sistemaVentas\obj\Debug\net6.0\sistemaVentas.pdb

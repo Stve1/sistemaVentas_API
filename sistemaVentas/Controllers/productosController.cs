@@ -68,6 +68,25 @@ namespace sistemaVentas.Controllers
             return idProducto;
         }
 
+        //obtenerProductos
+        [HttpGet, Route("obtenerMetodosPagos")]
+        public List<classMetodosPagos> obtenerMetodosPagos(int id_unidad)
+        {
+            List<classMetodosPagos> respuesta = new List<classMetodosPagos>();
+
+            vrProductos ovrProductos = new vrProductos();
+
+            try
+            {
+                respuesta = ovrProductos.obtenerMetodosPagos(id_unidad);
+            }
+            catch (Exception ex)
+            {
+                string mensaje = ex.Message;
+            }
+            return respuesta;
+        }
+
         // POST: HomeController1/Edit/5
         /*
         [HttpPost, Route("guardarProductos")]

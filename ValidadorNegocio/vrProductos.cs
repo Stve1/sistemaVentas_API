@@ -59,5 +59,23 @@ namespace ValidadorNegocio
 
             return idProducto;
         }
+
+        public List<classMetodosPagos> obtenerMetodosPagos(int id_unidad)
+        {
+            List<classMetodosPagos> id_producto = new List<classMetodosPagos>();
+
+            daProductos odaProductos = new daProductos();
+
+            try
+            {
+                id_producto = odaProductos.obtenerMetodosPagos(id_unidad);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return id_producto;
+        }
     }
 }

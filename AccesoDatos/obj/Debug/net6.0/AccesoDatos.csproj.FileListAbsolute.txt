@@ -9,7 +9,7 @@ C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\Acc
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\AccesoDatos.AssemblyInfo.cs
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\AccesoDatos.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\AccesoDatos.sourcelink.json
-C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\AccesoDatos.csproj.CopyComplete
+C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\AccesoDa.B2719C34.Up2Date
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\AccesoDatos.dll
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\refint\AccesoDatos.dll
 C:\Users\Pc\Documents\HanzelVelez\Proyectos\sistemaVentaV1\sistemaVentas_API\AccesoDatos\obj\Debug\net6.0\AccesoDatos.pdb

@@ -46,7 +46,7 @@ namespace ValidadorNegocio
             return idProducto;
         }
 
-        public int registrarSalida(classSalidas salidas)
+        public int registrarSalida(classEnvioSalida salidas)
         {
             int idSalida = -1;
 

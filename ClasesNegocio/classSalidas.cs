@@ -8,11 +8,19 @@ namespace ClasesNegocio
 {
     public class classSalidas
     {
-        public int id_salida {  get; set; }
+        public int id_salida { get; set; }
         public string descripcion_salida { get; set; }
         public int valor_salida { get; set; }
         public int metodo_pago_salida { get; set; }
         public string descripcion_metodo_pago { get; set; }
         public DateTime fecha_registro_salida { get; set; }
+    }
+
+    public class classEnvioSalida
+    {
+        public int id_sala { get; set; }
+        public int valor_salida { get; set;}
+        public string descripcion_salida { get; set;}
+        public int metodo_pago { get; set;}
     }
 }
