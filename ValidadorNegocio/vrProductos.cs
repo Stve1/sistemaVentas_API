@@ -5,40 +5,50 @@ namespace ValidadorNegocio
 {
     public class vrProductos
     {
-        public List<classProductos> obtenerProductos()
+        public BeRes obtenerProductos()
         {
-            List<classProductos> id_producto = new List<classProductos>();
-
+            BeRes resProd= new();
             daProductos odaProductos = new daProductos();
 
             try
             {
-                id_producto = odaProductos.obtenerProductos();
+                resProd = odaProductos.obtenerProductos();
             }
             catch(Exception ex)
             {
-                throw ex;
+                resProd = new()
+                {
+                    code = 401,
+                    status = "F",
+                    message = ex.Message
+                };
             }
 
-            return id_producto;
+            return resProd;
         }
 
-        public int registrarVentas(classTotProductos totalProductos)
+        public BeRes registrarVentas(classTotProductos totalProductos)
         {
+            BeRes res = new();
             int idProducto = -1;
 
             daProductos odaProductos = new daProductos();
 
             try
             {
-                idProducto = odaProductos.registrarVentas(totalProductos);
+                res = odaProductos.registrarVentas(totalProductos);
             }
             catch (Exception ex)
             {
-                throw ex;
+                res = new()
+                {
+                    code = 400,
+                    status= "F",
+                    message = ex.Message
+                };
             }
 
-            return idProducto;
+            return res;
         }
 
 

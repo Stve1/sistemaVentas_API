@@ -13,40 +13,50 @@ namespace sistemaVentas.Controllers
 
         //obtenerProductos
         [HttpGet, Route("obtenerProductos")]
-        public List<classProductos> obtenerProductos()
+        public BeRes obtenerProductos()
         {
-            List<classProductos> respuesta = new List<classProductos>();
-
+            BeRes respuesta = new();
             vrProductos ovrProductos = new vrProductos();
-                
+
             try
             {
                 respuesta = ovrProductos.obtenerProductos();
             }
             catch(Exception ex)
             {
-                string mensaje = ex.Message;
+                respuesta = new()
+                {
+                    code =400,
+                    status = "F",
+                    message = ex.Message,
+                };
             }
             return respuesta;
         }
 
         //registrarVentas
         [HttpPost, Route("registrarVentas")]
-        public int registrarVentas(classTotProductos totalProductos)
+        public BeRes registrarVentas(classTotProductos totalProductos)
         {
+            BeRes res = new();
             int idProducto = -1;
 
             vrProductos ovrProductos = new vrProductos();
 
             try
             {
-                idProducto = ovrProductos.registrarVentas(totalProductos);
+                res = ovrProductos.registrarVentas(totalProductos);
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                res = new()
+                {
+                    code = 400,
+                    status = "F",
+                    message = ex.Message,
+                };
             }
-            return idProducto;
+            return res;
         }
 
         //registrarProductos

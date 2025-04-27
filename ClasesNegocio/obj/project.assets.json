@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Pc\\.nuget\\packages\\": {},
+    "C:\\Users\\hsvel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pc\\Documents\\HanzelVelez\\Proyectos\\sistemaVentaV1\\sistemaVentas_API\\ClasesNegocio\\ClasesNegocio.csproj",
+      "projectUniqueName": "C:\\Users\\hsvel\\OneDrive\\Documentos\\Hanzel\\PR\\sistemaVentas_API\\ClasesNegocio\\ClasesNegocio.csproj",
       "projectName": "ClasesNegocio",
-      "projectPath": "C:\\Users\\Pc\\Documents\\HanzelVelez\\Proyectos\\sistemaVentaV1\\sistemaVentas_API\\ClasesNegocio\\ClasesNegocio.csproj",
-      "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pc\\Documents\\HanzelVelez\\Proyectos\\sistemaVentaV1\\sistemaVentas_API\\ClasesNegocio\\obj\\",
+      "projectPath": "C:\\Users\\hsvel\\OneDrive\\Documentos\\Hanzel\\PR\\sistemaVentas_API\\ClasesNegocio\\ClasesNegocio.csproj",
+      "packagesPath": "C:\\Users\\hsvel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hsvel\\OneDrive\\Documentos\\Hanzel\\PR\\sistemaVentas_API\\ClasesNegocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hsvel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -51,7 +51,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net6.0": {
@@ -67,12 +68,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -2468,12 +2468,18 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.22"
         },
         "runtime": {
-          "AccesoDatos.dll": {}
+          "AccesoDatos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ClasesNegocio/1.0.0": {
         "runtime": {
-          "ClasesNegocio.dll": {}
+          "ClasesNegocio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ValidadorNegocio/1.0.0": {
@@ -2481,7 +2487,10 @@
           "AccesoDatos": "1.0.0"
         },
         "runtime": {
-          "ValidadorNegocio.dll": {}
+          "ValidadorNegocio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
